@@ -1,4 +1,4 @@
-const routes = {
+const pages = {
     dashboard: Dashboard,
     teachers: Teachers,
     tasks: Tasks,
@@ -13,6 +13,13 @@ function loadPage(page) {
 
     main.innerHTML = "";
 
-    routes[page](main);
+    pages[page](main);
 
+    document.querySelectorAll(".nav-item").forEach(item => {
+        item.classList.remove("active");
+    });
+
+    document
+        .querySelector(`[data-page="${page}"]`)
+        .classList.add("active");
 }
