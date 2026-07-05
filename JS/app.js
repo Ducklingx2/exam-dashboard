@@ -1,1 +1,1 @@
-
+loadPage("dashboard");
