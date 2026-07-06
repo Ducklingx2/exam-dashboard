@@ -1,5 +1,3 @@
-const teachers = [];
-
 function Teachers(main) {
 
     main.innerHTML = `
