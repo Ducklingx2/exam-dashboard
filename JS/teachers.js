@@ -42,7 +42,7 @@ function addTeacher() {
     }
 
     teachers.push({
-        id: Date.now(),
+        id: generateId(),
         name,
         email,
         department,
