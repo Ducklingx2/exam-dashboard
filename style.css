@@ -456,3 +456,82 @@ tr:hover{
     }
 
 }
+.dashboard{
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+
+}
+
+.welcome-card{
+
+    background:#1E293B;
+    padding:30px;
+    border-radius:18px;
+
+}
+
+.welcome-card h2{
+
+    margin-bottom:10px;
+
+}
+
+.welcome-card p{
+
+    color:#94A3B8;
+
+}
+
+.dashboard-grid{
+
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+
+}
+
+.panel{
+
+    background:#1E293B;
+    padding:25px;
+    border-radius:18px;
+
+}
+
+.panel h2{
+
+    margin-bottom:20px;
+
+}
+
+.overview{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+.overview-item{
+
+    background:#0F172A;
+    border-radius:12px;
+    padding:20px;
+
+}
+
+.overview-item span{
+
+    color:#94A3B8;
+    font-size:14px;
+
+}
+
+.overview-item h3{
+
+    font-size:32px;
+    margin-top:10px;
+
+}
