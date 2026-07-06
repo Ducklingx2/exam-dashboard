@@ -22,4 +22,7 @@ function loadPage(page) {
     document
         .querySelector(`[data-page="${page}"]`)
         .classList.add("active");
+
+    refreshUI();
+
 }
