@@ -110,7 +110,7 @@ function addTask() {
 
     tasks.push({
 
-        id: Date.now(),
+        id: generateId(),
 
         teacherId,
 
