@@ -1,5 +1,7 @@
 window.onload = () => {
 
+    loadData();
+
     document.querySelectorAll(".nav-item").forEach(item => {
 
         item.addEventListener("click", () => {
