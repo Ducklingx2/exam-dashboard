@@ -4,8 +4,7 @@ const pages = {
     tasks: Tasks,
     reports: Reports,
     analytics: Analytics,
-    settings: Settings,
-    departments: Departments
+    settings: Settings
 };
 
 function loadPage(page) {
