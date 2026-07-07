@@ -1,7 +1,3 @@
-if (typeof tasks === "undefined") {
-    const tasks = [];
-}
-
 function Tasks(main) {
 
     let teacherOptions = "";
@@ -75,21 +71,39 @@ function Tasks(main) {
 
 }
 
+function loadTaskTemplates() {
+
+    const select = document.getElementById("taskTemplate");
+
+    select.innerHTML = "";
+
+    taskTemplates.forEach(template => {
+
+        select.innerHTML += `
+            <option value="${template.id}">
+                ${template.name}
+            </option>
+        `;
+
+    });
+
+}
+
 function addTask() {
+
+    const templateId =
+        Number(document.getElementById("taskTemplate").value);
+
+    const template =
+        taskTemplates.find(t => t.id === templateId);
+
+    const title = template.name;
 
     const teacherId =
         Number(document.getElementById("taskTeacher").value);
 
     const deadline =
         document.getElementById("taskDeadline").value;
-
-    if (title === "") {
-
-        alert("Please enter a task.");
-
-        return;
-
-    }
 
     tasks.push({
 
@@ -99,17 +113,18 @@ function addTask() {
 
         title,
 
-        deadline
+        deadline,
+
+        status: "Pending"
 
     });
 
     saveData();
-    
+
     renderTasks();
 
     updateDashboardStats();
 
-    document.getElementById("taskTitle").value = "";
     document.getElementById("taskDeadline").value = "";
 
 }
