@@ -48,6 +48,7 @@ function addTeacher() {
         department,
         subject
     });
+    saveData();
 
     renderTeachers();
 
