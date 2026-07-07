@@ -154,7 +154,15 @@ function renderTasks() {
         ${task.status === "Completed"
             ? ""
             : `<br><br>
-               <button onclick="submitTask(${task.id})">
+
+            <input
+            type="file"
+            id="file-${task.id}"
+            class="task-file">
+               
+               <button 
+                  class="submit-btn"
+                  onclick="submitTask(${task.id})">
                    Submit
                </button>`
         }
@@ -177,7 +185,21 @@ function submitTask(taskId) {
 
     if (!task) return;
 
+    const fileInput =
+        document.getElementById(`file-${taskId}`);
+
+    if (fileInput.files.length === 0) {
+
+        alert("Please choose a file.");
+
+        return;
+
+    }
+
+    task.fileName = fileInput.files[0].name;
+
     task.status = "Completed";
+
     task.completedAt = new Date().toISOString();
 
     saveData();
