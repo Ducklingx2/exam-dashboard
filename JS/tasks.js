@@ -69,14 +69,13 @@ function Tasks(main) {
         .getElementById("addTaskBtn")
         .addEventListener("click", addTask);
 
+    loadTaskTemplates();
+    
     renderTasks();
 
 }
 
 function addTask() {
-
-    const title =
-        document.getElementById("taskTitle").value.trim();
 
     const teacherId =
         Number(document.getElementById("taskTeacher").value);
