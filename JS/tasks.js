@@ -39,14 +39,6 @@ function Tasks(main) {
                 type="date"
             >
 
-            <select id="taskStatus">
-
-                <option>Pending</option>
-                <option>Completed</option>
-                <option>Overdue</option>
-
-            </select>
-
             <button id="addTaskBtn">
 
                 Add Task
@@ -64,7 +56,6 @@ function Tasks(main) {
                     <th>Teacher</th>
                     <th>Task</th>
                     <th>Deadline</th>
-                    <th>Status</th>
 
                 </tr>
 
@@ -97,9 +88,6 @@ function addTask() {
     const deadline =
         document.getElementById("taskDeadline").value;
 
-    const status =
-        document.getElementById("taskStatus").value;
-
     if (title === "") {
 
         alert("Please enter a task.");
@@ -116,9 +104,7 @@ function addTask() {
 
         title,
 
-        deadline,
-
-        status
+        deadline
 
     });
 
@@ -155,8 +141,6 @@ function renderTasks() {
                 <td>${task.title}</td>
 
                 <td>${task.deadline}</td>
-
-                <td>${task.status}</td>
 
             </tr>
 
