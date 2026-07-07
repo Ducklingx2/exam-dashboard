@@ -523,3 +523,38 @@ tr:hover{
     background:#3B82F6;
 
 }
+
+.submit-btn {
+
+    margin-top: 15px;
+
+    width: 100%;
+
+    padding: 12px 20px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #2e8b57;
+
+    color: white;
+
+    transition: 0.2s;
+
+}
+
+.submit-btn:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+
+    background: #33b864;
+}
