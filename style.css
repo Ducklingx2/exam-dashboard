@@ -1,12 +1,5 @@
-/* ===========================
-   Google Font
-=========================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap');
-
-/* ===========================
-   Global
-=========================== */
 
 *{
     margin:0;
@@ -28,10 +21,6 @@ body{
     min-height:100vh;
 
 }
-
-/* ===========================
-   Sidebar
-=========================== */
 
 .sidebar{
 
@@ -103,10 +92,6 @@ body{
 
 }
 
-/* ===========================
-   Main Content
-=========================== */
-
 .content{
 
     flex:1;
@@ -173,34 +158,6 @@ body{
 
 }
 
-.topbar-right button{
-
-    padding:12px 18px;
-
-    border:none;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    background:#2563EB;
-
-    color:white;
-
-    transition:.25s;
-
-}
-
-.topbar-right button:hover{
-
-    background:#3B82F6;
-
-}
-
-/* ===========================
-   Statistics
-=========================== */
-
 .stats{
 
     display:grid;
@@ -249,10 +206,6 @@ body{
 
 }
 
-/* ===========================
-   Main Panel
-=========================== */
-
 #main{
 
     background:#111827;
@@ -264,10 +217,6 @@ body{
     padding:30px;
 
 }
-
-/* ===========================
-   Tables
-=========================== */
 
 table{
 
@@ -304,10 +253,6 @@ tr:hover{
     background:#1E293B;
 
 }
-
-/* ===========================
-   Teacher Form
-=========================== */
 
 .teacher-form{
 
@@ -359,10 +304,6 @@ tr:hover{
 
 }
 
-/* ===========================
-   Teacher Cards
-=========================== */
-
 .teacher-card{
 
     background:#1E293B;
@@ -394,10 +335,6 @@ tr:hover{
     color:#94A3B8;
 
 }
-
-/* ===========================
-   Responsive
-=========================== */
 
 @media(max-width:1000px){
 
