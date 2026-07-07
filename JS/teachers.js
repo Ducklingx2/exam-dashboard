@@ -10,8 +10,6 @@ function Teachers(main) {
 
             <input id="teacherEmail" placeholder="Email">
 
-            <input id="teacherDepartment" placeholder="Department">
-
             <input id="teacherSubject" placeholder="Subject">
 
             <button id="addTeacherBtn">Add Teacher</button>
@@ -33,7 +31,6 @@ function addTeacher() {
 
     const name = document.getElementById("teacherName").value.trim();
     const email = document.getElementById("teacherEmail").value.trim();
-    const department = document.getElementById("teacherDepartment").value.trim();
     const subject = document.getElementById("teacherSubject").value.trim();
 
     if (!name) {
@@ -45,7 +42,6 @@ function addTeacher() {
         id: generateId(),
         name,
         email,
-        department,
         subject
     });
     saveData();
@@ -54,7 +50,6 @@ function addTeacher() {
 
     document.getElementById("teacherName").value = "";
     document.getElementById("teacherEmail").value = "";
-    document.getElementById("teacherDepartment").value = "";
     document.getElementById("teacherSubject").value = "";
 }
 
@@ -71,8 +66,6 @@ function renderTeachers() {
         <div class="teacher-card">
 
             <h3>${teacher.name}</h3>
-
-            <p>${teacher.department}</p>
 
             <p>${teacher.subject}</p>
 
