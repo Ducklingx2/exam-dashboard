@@ -48,6 +48,7 @@ function Tasks(main) {
                     <th>Teacher</th>
                     <th>Task</th>
                     <th>Deadline</th>
+                    <th>Status</th>
 
                 </tr>
 
