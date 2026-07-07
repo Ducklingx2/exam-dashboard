@@ -77,3 +77,21 @@ function loadData() {
     }
 
 }
+
+function getTaskStatus(task) {
+
+    if (task.status === "Completed")
+        return "🟢 Completed";
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const deadline = new Date(task.deadline);
+    deadline.setHours(0, 0, 0, 0);
+
+    if (deadline < today)
+        return "🔴 Overdue";
+
+    return "🟡 Pending";
+
+}
