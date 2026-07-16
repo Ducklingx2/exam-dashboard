@@ -95,3 +95,41 @@ function getTaskStatus(task) {
     return "🟡 Pending";
 
 }
+
+function applyTheme(name) {
+
+    const theme = themes[name];
+
+    if (!theme) return;
+
+    for (const property in theme) {
+
+        document.documentElement.style.setProperty(
+            property,
+            theme[property]
+        );
+
+    }
+
+    localStorage.setItem("theme", name);
+
+}
+
+function applyBorder(style) {
+
+    const border = borders[style];
+
+    if (!border) return;
+
+    for (const property in border) {
+
+        document.documentElement.style.setProperty(
+            property,
+            border[property]
+        );
+
+    }
+
+    localStorage.setItem("border", style);
+
+}

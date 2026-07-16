@@ -15,3 +15,8 @@ window.onload = () => {
     loadPage("dashboard");
 
 };
+
+const savedTheme =
+    localStorage.getItem("theme") || "ocean";
+
+applyTheme(savedTheme);

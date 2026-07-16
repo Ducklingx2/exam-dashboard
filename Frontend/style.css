@@ -1,3 +1,42 @@
+:root{
+
+    /* Theme */
+
+    --primary:#2563EB;
+    --primary-hover:#3B82F6;
+    --secondary:#1D4ED8;
+
+    /* Backgrounds */
+
+    --bg:#0F172A;
+    --sidebar:#111827;
+    --panel:#1E293B;
+
+    /* Text */
+
+    --text:#F8FAFC;
+    --text-muted:#94A3B8;
+
+    /* Borders */
+
+    --border:rgba(255,255,255,.08);
+    --border-style:1px solid var(--border);
+
+    /* Status */
+
+    --success:#2E8B57;
+    --success-hover:#33B864;
+
+    /* UI */
+
+    --radius:18px;
+    --transition:.25s;
+
+    /* Personalization */
+
+    --panel-shadow:none;
+
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap');
 
@@ -10,8 +49,18 @@
 body{
 
     font-family:'Inter',sans-serif;
-    background:#0F172A;
-    color:#F8FAFC;
+    background:var(--bg);
+    color:var(--text);
+
+}
+
+.card,
+.panel,
+.teacher-card,
+.welcome-card,
+#main{
+
+    box-shadow:var(--panel-shadow);
 
 }
 
@@ -25,8 +74,8 @@ body{
 .sidebar{
 
     width:260px;
-    background:#111827;
-    border-right:1px solid rgba(255,255,255,.08);
+    background:var(--sidebar);
+    border-right:var(--border-style);
 
     display:flex;
     flex-direction:column;
@@ -36,13 +85,12 @@ body{
 .logo{
 
     padding:35px 30px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-
+    border-bottom:var(--border-style);
 }
 
 .logo h2{
 
-    color:#3B82F6;
+    color:var(--primary);
     font-size:28px;
 
 }
@@ -50,7 +98,7 @@ body{
 .logo p{
 
     margin-top:6px;
-    color:#94A3B8;
+    color:var(--text-muted);
     font-size:14px;
 
 }
@@ -64,31 +112,29 @@ body{
 
 .nav-item{
 
-    padding:18px 30px;
-
-    cursor:pointer;
-
-    transition:.25s;
-
-    color:#CBD5E1;
-
-    font-weight:500;
+    color:var(--text-muted);
 
 }
 
 .nav-item:hover{
 
-    background:#1E293B;
+    background:var(--panel);
 
-    color:white;
+    color:var(--text);
 
 }
 
 .active{
 
-    background:#2563EB;
+    background:var(--primary);
 
-    color:white;
+    color:var(--text);
+
+}
+
+.active:hover{
+
+    background:var(--primary-hover);
 
 }
 
@@ -99,10 +145,6 @@ body{
     padding:40px;
 
 }
-
-/* ===========================
-   Topbar
-=========================== */
 
 .topbar{
 
@@ -124,7 +166,7 @@ body{
 
 .topbar p{
 
-    color:#94A3B8;
+    color:var(--text-muted);
 
     margin-top:5px;
 
@@ -150,9 +192,9 @@ body{
 
     border-radius:10px;
 
-    background:#1E293B;
+    background: var(--panel);
 
-    color:white;
+    color:var(--text);
 
     outline:none;
 
@@ -172,13 +214,13 @@ body{
 
 .card{
 
-    background:#1E293B;
+    background: var(--panel);
 
-    border-radius:18px;
+    border-radius:var(--radius);
 
     padding:30px;
 
-    transition:.25s;
+    transition:var(--transition);
 
 }
 
@@ -190,7 +232,7 @@ body{
 
 .card h3{
 
-    color:#94A3B8;
+    color:var(--text-muted);
 
     margin-bottom:15px;
 
@@ -202,15 +244,15 @@ body{
 
     font-size:38px;
 
-    color:white;
+    color:var(--text);
 
 }
 
 #main{
 
-    background:#111827;
+    background: var(--sidebar);
 
-    border-radius:18px;
+    border-radius:var(--radius);
 
     min-height:550px;
 
@@ -234,9 +276,9 @@ table {
 
 th{
 
-    background:#2563EB;
+    background: var(--primary);
 
-    color:white;
+    color:var(--text);
 
     text-align:left;
 
@@ -248,13 +290,13 @@ td{
 
     padding:15px;
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:var(--border-style);
 
 }
 
 tr:hover{
 
-    background:#1E293B;
+    background: var(--panel);
 
 }
 
@@ -278,9 +320,9 @@ tr:hover{
 
     border-radius:10px;
 
-    background:#1E293B;
+    background: var(--panel);
 
-    color:white;
+    color:var(--text);
 
     outline:none;
 
@@ -290,27 +332,27 @@ tr:hover{
 
     border:none;
 
-    background:#2563EB;
+    background: var(--primary);
 
-    color:white;
+    color:var(--text);
 
     border-radius:10px;
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:var(--transition);
 
 }
 
 .teacher-form button:hover{
 
-    background:#3B82F6;
+    background: var(--primary-hover);
 
 }
 
 .teacher-card{
 
-    background:#1E293B;
+    background: var(--panel);
 
     padding:20px;
 
@@ -318,7 +360,7 @@ tr:hover{
 
     margin-bottom:15px;
 
-    transition:.25s;
+    transition:var(--transition);
 
 }
 
@@ -336,7 +378,7 @@ tr:hover{
 
 .teacher-card p{
 
-    color:#94A3B8;
+    color:var(--text-muted);
 
 }
 
@@ -407,9 +449,9 @@ tr:hover{
 
 .welcome-card{
 
-    background:#1E293B;
+    background: var(--panel);
     padding:30px;
-    border-radius:18px;
+    border-radius:var(--radius);
 
 }
 
@@ -421,7 +463,7 @@ tr:hover{
 
 .welcome-card p{
 
-    color:#94A3B8;
+    color:var(--text-muted);
 
 }
 
@@ -435,9 +477,9 @@ tr:hover{
 
 .panel{
 
-    background:#1E293B;
+    background: var(--panel);
     padding:25px;
-    border-radius:18px;
+    border-radius:var(--radius);
 
 }
 
@@ -457,15 +499,15 @@ tr:hover{
 
 .overview-item{
 
-    background:#0F172A;
-    border-radius:12px;
+    background:var(--bg);
+    border-radius:var(--radius);
     padding:20px;
 
 }
 
 .overview-item span{
 
-    color:#94A3B8;
+    color:var(--text-muted);
     font-size:14px;
 
 }
@@ -498,9 +540,9 @@ tr:hover{
 
     border-radius:10px;
 
-    background:#1E293B;
+    background: var(--panel);
 
-    color:white;
+    color:var(--text);
 
     outline:none;
 
@@ -508,9 +550,9 @@ tr:hover{
 
 .task-form button{
 
-    background:#2563EB;
+    background: var(--primary);
 
-    color:white;
+    color:var(--text);
 
     border:none;
 
@@ -518,13 +560,13 @@ tr:hover{
 
     cursor:pointer;
 
-    transition:.2s;
+    transition:var(--transition);
 
 }
 
 .task-form button:hover{
 
-    background:#3B82F6;
+    background: var(--primary-hover);
 
 }
 
@@ -546,11 +588,11 @@ tr:hover{
 
     cursor: pointer;
 
-    background: #2e8b57;
+    background: var(--success);
 
-    color: white;
+    color: var(--text);
 
-    transition: 0.2s;
+    transition: var(--transition);
 
 }
 
@@ -560,5 +602,5 @@ tr:hover{
 
     opacity: 0.9;
 
-    background: #33b864;
+    background: var(--success-hover);
 }
